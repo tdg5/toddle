@@ -1,3 +1,8 @@
+.blankLetter {
+  background-color: #fff;
+  border: 0.0625em solid #888;
+}
+
 .correctLetter {
   background-color: #c9b458;
 }
@@ -8,4 +13,24 @@
 
 .incorrectLetter {
   background-color: #787c7e;
+}
+
+.tile {
+  display: inline-flex;
+  height: 2em;
+  width: 2em;
+  margin: 0.5em;
+  font-size: 2em;
+  line-height: 2em;
+  justify-content: center;
+  vertical-align: middle;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.wordle {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

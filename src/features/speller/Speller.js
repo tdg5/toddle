@@ -1,21 +1,18 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  addLetter, deleteLetter, selectKeyboardLetters, selectStatus, selectTargetWord,
+  addLetter, deleteLetter, selectKeyboardLetters, selectTargetWord,
   selectWordInProgress, selectWordList, startWord
 } from './spellerSlice';
 import styles from './Speller.module.css';
-import { WordInProgress } from '../word-in-progress/WordInProgress';
+import { Wordle } from '../../components/wordle/Wordle';
 
 export function Speller() {
   const dispatch = useDispatch();
   const keyboardLetters = useSelector(selectKeyboardLetters);
   const wordInProgress = useSelector(selectWordInProgress);
   const wordList = useSelector(selectWordList);
-  const status = useSelector(selectStatus);
   const targetWord = useSelector(selectTargetWord);
-
-  const banner = status === "spelled-word" ? <h1>Yay!</h1> : null;
 
   const letters = keyboardLetters.map(letter => {
     return <button key={letter} className={`${styles.letter}`} onClick={() => dispatch(addLetter(letter))}>{letter}</button>
@@ -44,11 +41,11 @@ export function Speller() {
   return (
     <div className={styles.thinger}>
       <Header />
-      <WordInProgress
-        current={wordInProgress}
-        target={targetWord && targetWord.name} />
-      <h2>{wordInProgress}</h2>
-      {banner}
+      <div>
+        <Wordle
+          current={wordInProgress}
+          target={targetWord && targetWord.name} />
+      </div>
       <div className={styles.row}>
         {letters}
       </div>

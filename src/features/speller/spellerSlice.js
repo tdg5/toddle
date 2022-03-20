@@ -51,7 +51,7 @@ const getKeyboardLetters = function(wordList, word) {
   });
   let letters = word.name.split('');
   letters.forEach(letter => delete allLetters[letter]);
-  while (letters.length < 9 && Object.keys(allLetters).length > 0) {
+  while (letters.length < 8 && Object.keys(allLetters).length > 0) {
     const candidateLetters = Object.keys(allLetters);
     const rnd = Math.floor(Math.random() * (candidateLetters.length - 1));
     const letter = candidateLetters[rnd];
@@ -100,7 +100,6 @@ export const spellerSlice = createSlice({
 
 export const { addLetter, deleteLetter, endWord, startWord } = spellerSlice.actions;
 
-export const selectStatus = (state) => state.speller.status;
 export const selectKeyboardLetters = (state) => state.speller.keyboardLetters;
 export const selectWordInProgress = (state) => state.speller.wordInProgress;
 export const selectWordList = (state) => state.speller.wordList;
