@@ -19,7 +19,7 @@ export function Speller() {
   });
 
   if (letters.length > 0) {
-    letters.push(<button key={"deleteLetter"} className={`${styles.letter}`} onClick={() => dispatch(deleteLetter())}>&lt;&lt;</button>);
+    letters.push(<button key={"deleteLetter"} className={`${styles.letter}`} onClick={() => dispatch(deleteLetter())}>&#x232b;</button>);
   }
 
   function Header(props) {

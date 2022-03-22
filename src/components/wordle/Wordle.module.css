@@ -1,6 +1,6 @@
 .blankLetter {
   background-color: #fff;
-  border: 0.0625em solid #888;
+  border: 0.03125em solid #888;
 }
 
 .correctLetter {
@@ -16,16 +16,17 @@
 }
 
 .tile {
+  box-sizing: border-box;
   display: inline-flex;
-  height: 2em;
-  width: 2em;
-  margin: 0.5em;
   font-size: 2em;
-  line-height: 2em;
-  justify-content: center;
-  vertical-align: middle;
   font-weight: bold;
+  height: 2em;
+  justify-content: center;
+  line-height: 2em;
+  margin: 0.5em;
   text-transform: uppercase;
+  vertical-align: middle;
+  width: 2em;
 }
 
 .wordle {
