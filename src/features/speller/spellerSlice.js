@@ -112,11 +112,5 @@ export const selectTargetWordImagePath = (state) => {
 export const selectTargetWord = (state) => {
   return state.speller.targetWord;
 }
-export const selectWordInProgressStandIn = (state) => {
-  if (state.speller.targetWord && state.speller.wordInProgress) {
-    
-  }
-  return "";
-}
 
 export default spellerSlice.reducer;
