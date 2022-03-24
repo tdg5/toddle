@@ -5,6 +5,12 @@ export const wordList = [
     imagePath: '/images/words/bat.png',
     name: 'bat',
   }, {
+    imagePath: '/images/words/bed.png',
+    name: 'bed',
+  }, {
+    imagePath: '/images/words/car.png',
+    name: 'car',
+  }, {
     imagePath: '/images/words/cat.png',
     name: 'cat',
   }, {
@@ -13,6 +19,9 @@ export const wordList = [
   }, {
     imagePath: '/images/words/fan.png',
     name: 'fan',
+  }, {
+    imagePath: '/images/words/fire.png',
+    name: 'fire',
   }, {
     imagePath: '/images/words/frog.png',
     name: 'frog',
@@ -29,8 +38,14 @@ export const wordList = [
     imagePath: '/images/words/man.png',
     name: 'man',
   }, {
+    imagePath: '/images/words/nose.png',
+    name: 'nose',
+  }, {
     imagePath: '/images/words/pan.png',
     name: 'pan',
+  }, {
+    imagePath: '/images/words/shoe.png',
+    name: 'shoe',
   },
 ];
 
