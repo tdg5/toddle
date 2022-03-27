@@ -6,6 +6,9 @@ export const words = [
     imagePath: '/images/words/bed.png',
     name: 'bed',
   }, {
+    imagePath: '/images/words/bee.png',
+    name: 'bee',
+  }, {
     imagePath: '/images/words/car.png',
     name: 'car',
   }, {
@@ -14,6 +17,9 @@ export const words = [
   }, {
     imagePath: '/images/words/dog.png',
     name: 'dog',
+  }, {
+    imagePath: '/images/words/ear.png',
+    name: 'ear',
   }, {
     imagePath: '/images/words/fan.png',
     name: 'fan',
