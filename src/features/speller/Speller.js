@@ -1,9 +1,11 @@
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   addLetter, deleteLetter, selectKeyboardLetters, selectTargetWord,
   selectWordInProgress, selectWordList, startWord
 } from './spellerSlice';
 import styles from './Speller.module.css';
+import { scrollToTop } from '../../shared/effects';
 import { Wordle } from '../../components/wordle/Wordle';
 
 export function Speller() {
@@ -36,6 +38,8 @@ export function Speller() {
       </div>
     );
   });
+
+  useEffect(() => scrollToTop());
 
   return (
     <div className={styles.thinger}>
