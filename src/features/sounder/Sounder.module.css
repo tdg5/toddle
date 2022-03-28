@@ -20,7 +20,7 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
-.letter {
+.button {
   appearance: none;
   background: none;
   font-size: 32px;
@@ -36,14 +36,13 @@
   transition: all 0.15s;
 }
 
-.letter:hover,
-.letter:focus {
+.button:hover,
+.button:focus {
   border: 2px solid rgba(112, 76, 182, 0.4);
 }
 
-.letter:active {
-  transform: scale(0.98);
-  border: 2px solid rgba(112, 76, 182, 0.2);
+.button:active {
+  background-color: rgba(112, 76, 182, 0.2);
 }
 
 .icon {
@@ -52,9 +51,4 @@
 
 .icon > img {
   height: 100%;
-}
-
-.letter {
-  font-size: 200%;
-  padding: 1em;
 }

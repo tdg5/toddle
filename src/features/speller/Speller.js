@@ -6,6 +6,7 @@ import {
 } from './spellerSlice';
 import styles from './Speller.module.css';
 import { scrollToTop } from '../../shared/effects';
+import Card from '../../components/card/Card';
 import { Wordle } from '../../components/wordle/Wordle';
 
 export function Speller() {
@@ -33,16 +34,16 @@ export function Speller() {
 
   const words = wordList.map(word => {
     return (
-      <div className={`${styles.item} ${styles.icon}`} key={word.name} onClick={() => dispatch(startWord(word))}>
+      <Card key={word.name} onClick={() => dispatch(startWord(word))}>
         <img src={word.imagePath} alt={word.name} />
-      </div>
+      </Card>
     );
   });
 
   useEffect(() => scrollToTop());
 
   return (
-    <div className={styles.thinger}>
+    <div>
       <Header />
       <div>
         <Wordle
