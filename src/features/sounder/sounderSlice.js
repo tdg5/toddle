@@ -7,6 +7,7 @@ const initialState = {
   status: 'choose-word',
   targetWord: null,
   wordGuessed: null,
+  wordsGuessed: {},
   wordList: words,
 };
 
@@ -43,11 +44,13 @@ export const sounderSlice = createSlice({
     },
     guessWord: (state, action) => {
       const guessedWord = action.payload;
-      state.status = guessedWord === state.wordChosen ? 'sounded-word' : 'sound-word';
+      state.status = guessedWord === state.targetWord.name ? 'sounded-word' : 'sound-word';
+      state.wordsGuessed[guessedWord.name] = true;
     },
     startWord: (state, action) => {
       const wordChosen = action.payload;
       state.candidateWords = getCandidateWords(state.wordList, wordChosen);
+      state.wordsGuessed = {};
       state.status = 'sound-word';
       state.targetWord = wordChosen;
     },
@@ -60,6 +63,9 @@ export const selectCandidateWords = (state) => state.sounder.candidateWords;
 export const selectStatus = (state) => state.sounder.status;
 export const selectTargetWordName = (state) => {
   return state.sounder.status === 'sound-word' ? state.sounder.targetWord.name : '';
+}
+export const selectWordsGuessed = (state) => {
+  return state.sounder.wordsGuessed;
 }
 export const selectWordList = (state) => state.speller.wordList;
 

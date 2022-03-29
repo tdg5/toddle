@@ -52,3 +52,34 @@
 .icon > img {
   height: 100%;
 }
+
+.letterTilesRow {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.letterTile {
+  background-color: #fff;
+  border: 0.03125em solid #888;
+  box-sizing: border-box;
+  display: inline-flex;
+  font-size: 2em;
+  font-weight: bold;
+  height: 2em;
+  justify-content: center;
+  line-height: 2em;
+  margin: 0.5em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 2em;
+}
+
+.correctWord {
+  background-color: #6aaa64;
+}
+
+.incorrectWord {
+  background-color: #787c7e;
+}
