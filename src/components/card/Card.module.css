@@ -1,0 +1,12 @@
+.card {
+  border: 1px solid #aaa;
+  box-shadow: 1px 1px #bbb;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 1em;
+  padding: 0.5em;
+}
+
+.card > img {
+  height: 256px;
+}
