@@ -43,10 +43,7 @@
 
 .letter:active {
   transform: scale(0.98);
-  border: 2px solid rgba(112, 76, 182, 0.4);
-  background-color: #ff00ff;
-  /* Scaling button to 0.98 to its original size */
-  /* Lowering the shadow */
+  border: 2px solid rgba(112, 76, 182, 0.2);
 }
 
 .thinger {
