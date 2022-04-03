@@ -20,7 +20,7 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
-.button {
+.letter {
   appearance: none;
   background: none;
   font-size: 32px;
@@ -36,13 +36,17 @@
   transition: all 0.15s;
 }
 
-.button:hover,
-.button:focus {
+.letter:hover,
+.letter:focus {
   border: 2px solid rgba(112, 76, 182, 0.4);
 }
 
-.button:active {
-  background-color: rgba(112, 76, 182, 0.2);
+.letter:active {
+  transform: scale(0.98);
+  border: 2px solid rgba(112, 76, 182, 0.4);
+  background-color: #ff00ff;
+  /* Scaling button to 0.98 to its original size */
+  /* Lowering the shadow */
 }
 
 .thinger {
