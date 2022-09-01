@@ -1,12 +1,11 @@
-import React from 'react';
-import { Speller } from './features/speller/Speller';
+import { GameSelector } from './features/gameSelector/GameSelector';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Speller />
+        <GameSelector />
       </header>
     </div>
   );
